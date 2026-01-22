@@ -122,7 +122,7 @@
   </footer>
 
   <script>
-    // Mobile menu toggle
+   
     const menuIcon = document.getElementById('menu-icon');
     const navMenu = document.getElementById('nav-menu');
     let isOpen = false;
@@ -133,7 +133,7 @@
       menuIcon.setAttribute('aria-expanded', isOpen);
       navMenu.classList.toggle('active');
 
-      // Close menu when clicking a link
+    
       if (isOpen) {
         document.querySelectorAll('.nav-menu a').forEach(link => {
           link.addEventListener('click', () => {
@@ -146,9 +146,9 @@
       }
     });
 
-    // Accessibility improvements
+
     document.addEventListener('keydown', (e) => {
-      // Close menu on Escape key
+    
       if (e.key === 'Escape' && isOpen) {
         menuIcon.classList.remove('active');
         menuIcon.setAttribute('aria-expanded', false);
@@ -156,7 +156,7 @@
         isOpen = false;
       }
 
-      // Navigate menu with arrow keys when open
+    
       if (isOpen && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) {
         e.preventDefault();
         const links = document.querySelectorAll('.nav-menu a');
@@ -172,7 +172,7 @@
       }
     });
 
-    // Smooth scrolling for anchor links
+   
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -190,5 +190,6 @@
     });
   </script>
 </body>
+
 
 </html>
