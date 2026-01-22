@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Egerton University Transport Department Emergency Alert - Critical safety information and emergency contacts">
+  <meta name="keywords" content="Egerton University, emergency, transport safety, road accident, emergency contacts">
+  <title>Egerton University Transport Department - Emergency Alert</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="images/logo.jpeg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Emergency Alert Banner -->
+  <div class="emergency-banner" role="alert">
+    <h1><i class="fas fa-exclamation-triangle"></i> EMERGENCY ALERT SYSTEM</h1>
+    <p>For immediate assistance during transport emergencies, use the contacts below. In case of life-threatening
+      emergencies, dial 999 or 112 immediately.</p>
+  </div>
+
+  <header class="main-header">
+    <div class="logo">
+      <figure>
+        <img src="images/logo.jpeg" alt="Egerton University Logo">
+        <div class="logo-text">
+          <figcaption>TRANSPORT DEPARTMENT EMERGENCY</figcaption>
+        </div>
+      </figure>
+    </div>
+    <button class="menu-icon" id="menu-icon" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <nav class="nav-menu" id="nav-menu" aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html"><i class="fas fa-house"></i> Home</a></li>
+      <li><a href="staff.html"><i class="fas fa-users"></i> Staff</a></li>
+      <li><a href="timetable.html"><i class="fas fa-calendar-check"></i> Timetable Schedule</a></li>
+      <li><a href="booking.html"><i class="fas fa-book"></i> Booking Section</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="main emergency-contacts">
+      <h2><i class="fa-solid fa-phone"></i> Emergency Contacts</h2>
+      <p class="section-intro">Save these numbers in your phone. Tap to call or send an SMS for immediate assistance.
+      </p>
+
+      <div class="emergency-grid">
+        <div class="contact-card-alert critical">
+          <h3><i class="fas fa-ambulance"></i> Medical Emergency</h3>
+          <p>For serious injuries, medical emergencies, or ambulance services.</p>
+          <div class="contact-number"><i class="fas fa-phone-volume"></i> 0722 123 456</div>
+          <div class="contact-actions">
+            <button class="btn btn-call" onclick="window.location.href='tel:0722123456'">
+              <i class="fas fa-phone"></i> Call Now
+            </button>
+            <button class="btn btn-sms" onclick="window.location.href='sms:0722123456'">
+              <i class="fas fa-sms"></i> Send SMS
+            </button>
+          </div>
+        </div>
+
+        <div class="contact-card-alert">
+          <h3><i class="fas fa-fire"></i> Fire Department</h3>
+          <p>For fire emergencies, chemical spills, or rescue operations.</p>
+          <div class="contact-number"><i class="fas fa-phone-volume"></i> 112 (Toll-free)</div>
+          <div class="contact-actions">
+            <button class="btn btn-call" onclick="window.location.href='tel:112'">
+              <i class="fas fa-phone"></i> Call Now
+            </button>
+          </div>
+        </div>
+
+        <div class="contact-card-alert">
+          <h3><i class="fas fa-shield-alt"></i> Police Hotline</h3>
+          <p>For crime reporting, security threats, or police assistance.</p>
+          <div class="contact-number"><i class="fas fa-phone-volume"></i> 999 (Toll-free)</div>
+          <div class="contact-actions">
+            <button class="btn btn-call" onclick="window.location.href='tel:999'">
+              <i class="fas fa-phone"></i> Call Now
+            </button>
+          </div>
+        </div>
+
+        <div class="contact-card-alert critical">
+          <h3><i class="fas fa-bus"></i> Transport Department</h3>
+          <p>University transport emergencies, breakdowns, or accidents involving university vehicles.</p>
+          <div class="contact-number"><i class="fas fa-phone-volume"></i> 0701 779 262</div>
+          <div class="contact-actions">
+            <button class="btn btn-call" onclick="window.location.href='tel:0701779262'">
+              <i class="fas fa-phone"></i> Call Now
+            </button>
+            <button class="btn btn-sms" onclick="window.location.href='sms:0701779262'">
+              <i class="fas fa-sms"></i> Send SMS
+            </button>
+          </div>
+        </div>
+
+        <div class="contact-card-alert">
+          <h3><i class="fas fa-car-crash"></i> Road Accident Response</h3>
+          <p>Rapid response unit for road accidents and traffic incidents.</p>
+          <div class="contact-number"><i class="fas fa-phone-volume"></i> 911</div>
+          <div class="contact-actions">
+            <button class="btn btn-call" onclick="window.location.href='tel:911'">
+              <i class="fas fa-phone"></i> Call Now
+            </button>
+          </div>
+        </div>
+
+        <div class="contact-card-alert">
+          <h3><i class="fas fa-tools"></i> Breakdown Assistance</h3>
+          <p>24/7 towing services and vehicle breakdown support.</p>
+          <div class="contact-number"><i class="fas fa-phone-volume"></i> 0733 987 654</div>
+          <div class="contact-actions">
+            <button class="btn btn-call" onclick="window.location.href='tel:0733987654'">
+              <i class="fas fa-phone"></i> Call Now
+            </button>
+            <button class="btn btn-sms" onclick="window.location.href='sms:0733987654'">
+              <i class="fas fa-sms"></i> Send SMS
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="main accident-procedure">
+      <h2><i class="fa-solid fa-car-burst"></i> What to Do in Case of a Road Accident</h2>
+      <p class="section-intro">Follow these steps carefully to ensure safety and proper handling of the situation.</p>
+
+      <div class="procedure-steps">
+        <div class="procedure-step">
+          <h3>Stay Calm and Ensure Safety</h3>
+          <p>Take a deep breath. Check yourself and others for injuries. If possible, move to a safe location away from
+            traffic.</p>
+        </div>
+
+        <div class="procedure-step">
+          <h3>Turn On Hazard Lights</h3>
+          <p>Immediately activate your vehicle's hazard lights to alert other drivers. Use reflective triangles if
+            available.</p>
+        </div>
+
+        <div class="procedure-step">
+          <h3>Move Vehicle Off Road</h3>
+          <p>If the vehicle is drivable and it's safe to do so, move it to the shoulder or a safe area away from
+            traffic.</p>
+        </div>
+
+        <div class="procedure-step critical">
+          <h3>Call Emergency Services</h3>
+          <p>Dial 999 for police, 112 for fire/ambulance, or use the emergency contacts above. Provide clear location
+            details.</p>
+        </div>
+
+        <div class="procedure-step">
+          <h3>Record Important Details</h3>
+          <p>Note location, time, vehicle registration numbers, insurance details, and take photos if it's safe to do
+            so.</p>
+        </div>
+
+        <div class="procedure-step critical">
+          <h3>Do NOT Leave the Scene</h3>
+          <p>Remain at the accident scene until authorities arrive and give you permission to leave, unless medical
+            evacuation is needed.</p>
+        </div>
+
+        <div class="procedure-step">
+          <h3>Cooperate with Authorities</h3>
+          <p>Provide accurate information to police and emergency responders. Follow their instructions carefully.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="main safety-tips">
+      <h2><i class="fa-solid fa-exclamation"></i> Road Safety & Preparedness Tips</h2>
+      <p class="section-intro">Prevention is key. Follow these safety measures to minimize risks during travel.</p>
+
+      <div class="safety-tips-grid">
+        <div class="tip-card">
+          <h3><i class="fas fa-medkit"></i> First Aid Kit</h3>
+          <p>Always carry a well-stocked first aid kit. Ensure university vehicles are equipped with medical supplies.
+          </p>
+        </div>
+
+        <div class="tip-card">
+          <h3><i class="fas fa-tire"></i> Vehicle Inspection</h3>
+          <p>Before long trips, check spare tire, tools, fuel, oil, brakes, and lights. Report any issues to transport
+            department.</p>
+        </div>
+
+        <div class="tip-card">
+          <h3><i class="fas fa-fire-extinguisher"></i> Fire Safety</h3>
+          <p>Ensure vehicles have functional fire extinguishers. Know how to use them and check expiry dates regularly.
+          </p>
+        </div>
+
+        <div class="tip-card">
+          <h3><i class="fas fa-mobile-alt"></i> Communication Preparedness</h3>
+          <p>Keep your phone charged. Carry a power bank. Save emergency contacts in your phone with "ICE" (In Case of
+            Emergency) prefix.</p>
+        </div>
+
+        <div class="tip-card">
+          <h3><i class="fas fa-user-friends"></i> Travel Companions</h3>
+          <p>Inform someone about your travel plans, route, and expected arrival time. Avoid traveling alone when
+            possible.</p>
+        </div>
+
+        <div class="tip-card">
+          <h3><i class="fas fa-file-alt"></i> Documentation</h3>
+          <p>Carry identification, insurance documents, and university transport authorization when using university
+            vehicles.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Emergency Quick Dial -->
+  <div class="quick-dial">
+    <button class="emergency-button" id="emergency-btn" aria-label="Emergency quick dial">
+      <i class="fas fa-phone"></i>
+    </button>
+    <div class="emergency-dropdown" id="emergency-dropdown">
+      <h4>Emergency Quick Dial</h4>
+      <div class="dropdown-contact">
+        <span>Police: 999</span>
+        <button class="btn btn-call" onclick="window.location.href='tel:999'">Call</button>
+      </div>
+      <div class="dropdown-contact">
+        <span>Ambulance: 112</span>
+        <button class="btn btn-call" onclick="window.location.href='tel:112'">Call</button>
+      </div>
+      <div class="dropdown-contact">
+        <span>Transport Dept: 0701 779 262</span>
+        <button class="btn btn-call" onclick="window.location.href='tel:0701779262'">Call</button>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <h3>Emergency Contact Information</h3>
+    <p><i class="fas fa-phone"></i> <b>Transport Emergency:</b> <a href="tel:0701779262">0701 779 262</a></p>
+    <p><i class="fas fa-envelope"></i> <b>Email:</b> <a
+        href="mailto:transport-emergency@egerton.ac.ke">transport-emergency@egerton.ac.ke</a></p>
+    <p><i class="fas fa-clock"></i> <b>24/7 Emergency Line:</b> Operational at all times for transport-related
+      emergencies</p>
+    <p class="copyright">&copy; 2025 Egerton University. All rights reserved. <br>Safety is our priority. Save these
+      contacts and share with fellow students and staff.</p>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuIcon = document.getElementById('menu-icon');
+    const navMenu = document.getElementById('nav-menu');
+    let isMenuOpen = false;
+
+    menuIcon.addEventListener('click', () => {
+      isMenuOpen = !isMenuOpen;
+      menuIcon.classList.toggle('active');
+      menuIcon.setAttribute('aria-expanded', isMenuOpen);
+      navMenu.classList.toggle('active');
+
+      // Close menu when clicking a link
+      if (isMenuOpen) {
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+          link.addEventListener('click', () => {
+            menuIcon.classList.remove('active');
+            menuIcon.setAttribute('aria-expanded', false);
+            navMenu.classList.remove('active');
+            isMenuOpen = false;
+          });
+        });
+      }
+    });
+
+    // Emergency quick dial toggle
+    const emergencyBtn = document.getElementById('emergency-btn');
+    const emergencyDropdown = document.getElementById('emergency-dropdown');
+    let isDropdownOpen = false;
+
+    emergencyBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      isDropdownOpen = !isDropdownOpen;
+      emergencyDropdown.classList.toggle('show');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!emergencyBtn.contains(e.target) && !emergencyDropdown.contains(e.target)) {
+        emergencyDropdown.classList.remove('show');
+        isDropdownOpen = false;
+      }
+    });
+
+    // Accessibility improvements
+    document.addEventListener('keydown', (e) => {
+      // Close menu on Escape key
+      if (e.key === 'Escape') {
+        if (isMenuOpen) {
+          menuIcon.classList.remove('active');
+          menuIcon.setAttribute('aria-expanded', false);
+          navMenu.classList.remove('active');
+          isMenuOpen = false;
+        }
+
+        if (isDropdownOpen) {
+          emergencyDropdown.classList.remove('show');
+          isDropdownOpen = false;
+        }
+      }
+    });
+
+    // Make emergency contacts clickable
+    document.querySelectorAll('.contact-number').forEach(contact => {
+      const phoneNumber = contact.textContent.match(/\d[\d\s]{8,}\d/);
+      if (phoneNumber) {
+        const cleanNumber = phoneNumber[0].replace(/\s/g, '');
+        contact.style.cursor = 'pointer';
+        contact.title = `Click to call ${phoneNumber[0]}`;
+        contact.addEventListener('click', () => {
+          window.location.href = `tel:${cleanNumber}`;
+        });
+      }
+    });
+
+    // Add current year to copyright
+    document.addEventListener('DOMContentLoaded', () => {
+      const copyrightElement = document.querySelector('.copyright');
+      if (copyrightElement) {
+        const currentYear = new Date().getFullYear();
+        copyrightElement.innerHTML = copyrightElement.innerHTML.replace('2025', currentYear);
+      }
+
+      // Add confirmation for emergency calls
+      document.querySelectorAll('.btn-call').forEach(button => {
+        button.addEventListener('click', function (e) {
+          const phoneNumber = this.closest('.contact-card-alert, .dropdown-contact')?.querySelector('.contact-number, span')?.textContent;
+          if (phoneNumber && confirm(`Are you sure you want to call ${phoneNumber.trim()}?`)) {
+            // Call will proceed via href
+          } else {
+            e.preventDefault();
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

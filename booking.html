@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Egerton University Transport Department - Book vehicles for class and department trips">
+  <meta name="keywords" content="Egerton University, transport, bus booking, trip request, vehicle rental">
+  <title>Egerton University Transport Department - Trip Booking System</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="images/logo.jpeg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <img src="images/logo.jpeg" alt="Egerton University Logo">
+      <div class="logo-text">
+        <h1>Egerton University Transport Department</h1>
+        <figcaption>Trip Booking & Vehicle Management System</figcaption>
+      </div>
+    </div>
+    <button class="menu-icon" id="menu-icon" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav-menu" id="nav-menu" aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page"><i class="fas fa-house"></i> Home</a></li>
+        <li><a href="staff.html"><i class="fas fa-users"></i> Staff</a></li>
+        <li><a href="timetable.html"><i class="fas fa-calendar-check"></i> Timetable</a></li>
+        <li><a href="emergency.html"><i class="fas fa-first-aid"></i> Emergency</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="trip-request">
+      <h2>Class / Department Trip Request</h2>
+      <p class="section-intro">Fill this form to request a bus for a trip. Office will review your request (for class
+        reps and other student representatives). All fields marked with * are required.</p>
+      <form id="tripForm" novalidate>
+        <div class="form-group">
+          <label for="department" class="required"><i class="fas fa-graduation-cap"></i> Department/Class</label>
+          <input id="department" name="department" type="text" placeholder="e.g. Computer Science 2nd Year" required>
+          <span class="input-hint"><i class="fas fa-info-circle"></i> Enter your department or class name</span>
+        </div>
+
+        <div class="form-group">
+          <label for="coordinator" class="required"><i class="fas fa-user"></i> Coordinator's Name</label>
+          <input id="coordinator" name="coordinator" type="text" placeholder="Name of organizer" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone" class="required"><i class="fas fa-phone"></i> Coordinator's Phone Number</label>
+          <input id="phone" name="phone" type="tel" placeholder="0712345678" pattern="[0-9]{10}" required>
+          <span class="input-hint"><i class="fas fa-info-circle"></i> 10-digit Kenyan phone number without spaces or
+            dashes</span>
+        </div>
+
+        <div class="form-group">
+          <label for="date" class="required"><i class="fas fa-calendar-day"></i> Trip Date</label>
+          <input id="date" name="date" type="date" required min="">
+          <span class="input-hint"><i class="fas fa-info-circle"></i> Select a date at least 3 days from today</span>
+        </div>
+
+        <div class="form-group">
+          <label for="departtime" class="required"><i class="fas fa-clock"></i> Anticipated Departure Time</label>
+          <input id="departtime" name="departtime" type="time" required>
+        </div>
+
+        <div class="form-group">
+          <label for="returntime" class="required"><i class="fas fa-clock"></i> Anticipated Return Time</label>
+          <input id="returntime" name="returntime" type="time" required>
+          <span class="input-hint"><i class="fas fa-info-circle"></i> Must be after departure time</span>
+        </div>
+
+        <div class="form-group">
+          <label for="numstudents" class="required"><i class="fas fa-users"></i> Number of Students</label>
+          <input id="numstudents" name="numstudents" type="number" min="1" max="100" placeholder="30" required>
+          <span class="input-hint"><i class="fas fa-info-circle"></i> Maximum capacity per bus is 60 students</span>
+        </div>
+
+        <div class="form-group">
+          <label for="destination" class="required"><i class="fas fa-map-marker-alt"></i> Destination</label>
+          <input id="destination" name="destination" type="text" placeholder="e.g. Konza City" required>
+        </div>
+
+        <div class="form-group">
+          <label for="notes" class="required"><i class="fas fa-sticky-note"></i> Additional Notes / Safety
+            Requirements</label>
+          <textarea id="notes" name="notes" rows="4" placeholder="Any special instructions (medical, equipment, etc.)"
+            required></textarea>
+          <span class="input-hint"><i class="fas fa-info-circle"></i> Please mention any accessibility needs or medical
+            requirements</span>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit" class="btn btn-primary flex"><i class="fas fa-paper-plane"></i> Send Request</button>
+          <button type="reset" class="btn btn-secondary flex"><i class="fas fa-redo"></i> Reset Form</button>
+        </div>
+
+        <div id="confirmation" class="confirmation" role="alert" aria-live="polite">
+          <i class="fas fa-check-circle"></i> Your trip request has been submitted successfully! We'll contact you
+          within 24 hours.
+        </div>
+      </form>
+    </section>
+
+    <section class="available-vehicles">
+      <h2>Available Vehicles for Booking</h2>
+      <p class="section-intro">Our fleet includes various vehicles suitable for different group sizes and trip types.
+      </p>
+
+      <div class="vehicle-gallery">
+        <article class="vehicle-card">
+          <img src="images/images (3).jpeg" alt="Modern mini bus with capacity of 30 passengers">
+          <div class="vehicle-info">
+            <h3>Mini Bus</h3>
+            <div class="vehicle-details">
+              <span><i class="fas fa-users"></i> 30 Seats</span>
+              <span><i class="fas fa-snowflake"></i> A/C</span>
+              <span><i class="fas fa-wifi"></i> WiFi</span>
+            </div>
+            <p>Ideal for medium-sized class trips. Comfortable seating and air conditioning for longer journeys.</p>
+            <div class="availability"><i class="fas fa-check-circle"></i> Available for booking</div>
+          </div>
+        </article>
+
+        <article class="vehicle-card">
+          <img src="images/images (4).jpeg" alt="Luxury coach bus with capacity of 60 passengers">
+          <div class="vehicle-info">
+            <h3>Coach Bus</h3>
+            <div class="vehicle-details">
+              <span><i class="fas fa-users"></i> 60 Seats</span>
+              <span><i class="fas fa-snowflake"></i> A/C</span>
+              <span><i class="fas fa-tv"></i> Entertainment</span>
+            </div>
+            <p>Perfect for large department trips. Includes reclining seats, overhead storage, and entertainment system.
+            </p>
+            <div class="availability"><i class="fas fa-check-circle"></i> Available for booking</div>
+          </div>
+        </article>
+
+        <article class="vehicle-card">
+          <img
+            src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80"
+            alt="University van with capacity of 15 passengers">
+          <div class="vehicle-info">
+            <h3>University Van</h3>
+            <div class="vehicle-details">
+              <span><i class="fas fa-users"></i> 15 Seats</span>
+              <span><i class="fas fa-briefcase"></i> Luggage</span>
+              <span><i class="fas fa-gas-pump"></i> Efficient</span>
+            </div>
+            <p>Suitable for small groups or faculty trips. Fuel-efficient and easy to maneuver in tight spaces.</p>
+            <div class="availability unavailable"><i class="fas fa-clock"></i> Available from next week</div>
+          </div>
+        </article>
+      </div>
+
+      <p class="p" aria-live="polite">Last updated on <time datetime="2025-07-11">11/07/25</time></p>
+    </section>
+
+    <section class="contact-section">
+      <h2>Contact Transport Department</h2>
+      <p class="section-intro">Get in touch with us for any inquiries or emergency situations.</p>
+
+      <div class="contact-info">
+        <div class="contact-card-box">
+          <i class="fas fa-phone-alt"></i>
+          <h3>Phone</h3>
+          <p><strong>Main Office:</strong> 0701779262</p>
+          <p><strong>Emergency:</strong> 0700123456</p>
+          <p>Mon-Fri: 8:00 AM - 5:00 PM</p>
+        </div>
+
+        <div class="contact-card-box">
+          <i class="fas fa-envelope"></i>
+          <h3>Email</h3>
+          <p><strong>Bookings:</strong> transport@egerton.ac.ke</p>
+          <p><strong>General Inquiries:</strong> transport-help@egerton.ac.ke</p>
+          <p>Response within 24 hours</p>
+        </div>
+
+        <div class="contact-card-box">
+          <i class="fas fa-map-marker-alt"></i>
+          <h3>Location</h3>
+          <p><strong>Transport Department</strong></p>
+          <p>Egerton University Main Campus</p>
+          <p>Njoro, Nakuru County</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <h3>Contact Us</h3>
+      <div class="footer-contact">
+        <a href="tel:0701779262"><i class="fas fa-phone"></i> 0701779262</a>
+        <a href="mailto:transport@egerton.ac.ke"><i class="fas fa-envelope"></i> transport@egerton.ac.ke</a>
+        <a href="https://www.egerton.ac.ke" target="_blank" rel="noopener"><i class="fas fa-globe"></i>
+          www.egerton.ac.ke</a>
+      </div>
+      <p class="copyright">&copy; 2025 Egerton University. All rights reserved. <br>This website follows WCAG 2.1
+        accessibility guidelines.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuIcon = document.getElementById('menu-icon');
+    const navMenu = document.getElementById('nav-menu');
+    let isOpen = false;
+
+    menuIcon.addEventListener('click', () => {
+      isOpen = !isOpen;
+      menuIcon.classList.toggle('active');
+      menuIcon.setAttribute('aria-expanded', isOpen);
+      navMenu.classList.toggle('active');
+
+      // Close menu when clicking a link
+      if (isOpen) {
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+          link.addEventListener('click', () => {
+            menuIcon.classList.remove('active');
+            menuIcon.setAttribute('aria-expanded', false);
+            navMenu.classList.remove('active');
+            isOpen = false;
+          });
+        });
+      }
+    });
+
+    // Form validation and submission
+    const tripForm = document.getElementById('tripForm');
+    const confirmation = document.getElementById('confirmation');
+
+    // Set minimum date to today + 3 days
+    const dateInput = document.getElementById('date');
+    const today = new Date();
+    const minDate = new Date(today);
+    minDate.setDate(today.getDate() + 3);
+    dateInput.min = minDate.toISOString().split('T')[0];
+
+    // Phone number validation
+    const phoneInput = document.getElementById('phone');
+    phoneInput.addEventListener('input', () => {
+      const phoneValue = phoneInput.value.replace(/\D/g, '');
+      phoneInput.value = phoneValue;
+    });
+
+    // Time validation
+    const departTimeInput = document.getElementById('departtime');
+    const returnTimeInput = document.getElementById('returntime');
+
+    returnTimeInput.addEventListener('change', () => {
+      if (departTimeInput.value && returnTimeInput.value) {
+        if (departTimeInput.value >= returnTimeInput.value) {
+          returnTimeInput.setCustomValidity('Return time must be after departure time');
+          returnTimeInput.reportValidity();
+        } else {
+          returnTimeInput.setCustomValidity('');
+        }
+      }
+    });
+
+    // Form submission
+    tripForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Additional validation
+      if (!tripForm.checkValidity()) {
+        tripForm.reportValidity();
+        return;
+      }
+
+      // Show confirmation message
+      confirmation.style.display = 'block';
+
+      // Scroll to confirmation
+      confirmation.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+      // Reset form after 5 seconds
+      setTimeout(() => {
+        tripForm.reset();
+        confirmation.style.display = 'none';
+      }, 5000);
+
+      // In a real application, you would send form data to a server here
+      console.log('Form submitted with data:', {
+        department: document.getElementById('department').value,
+        coordinator: document.getElementById('coordinator').value,
+        phone: document.getElementById('phone').value,
+        date: document.getElementById('date').value,
+        departtime: document.getElementById('departtime').value,
+        returntime: document.getElementById('returntime').value,
+        numstudents: document.getElementById('numstudents').value,
+        destination: document.getElementById('destination').value,
+        notes: document.getElementById('notes').value
+      });
+    });
+
+    // Reset form handler
+    tripForm.addEventListener('reset', () => {
+      confirmation.style.display = 'none';
+    });
+
+    // Accessibility improvements
+    document.addEventListener('keydown', (e) => {
+      // Close menu on Escape key
+      if (e.key === 'Escape' && isOpen) {
+        menuIcon.classList.remove('active');
+        menuIcon.setAttribute('aria-expanded', false);
+        navMenu.classList.remove('active');
+        isOpen = false;
+      }
+    });
+  </script>
+</body>
+
+</html>
