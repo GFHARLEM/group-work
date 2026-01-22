@@ -212,7 +212,7 @@
   </footer>
 
   <script>
-    // Mobile menu toggle
+  
     const menuIcon = document.getElementById('menu-icon');
     const navMenu = document.getElementById('nav-menu');
     let isOpen = false;
@@ -223,7 +223,7 @@
       menuIcon.setAttribute('aria-expanded', isOpen);
       navMenu.classList.toggle('active');
 
-      // Close menu when clicking a link
+    
       if (isOpen) {
         document.querySelectorAll('.nav-menu a').forEach(link => {
           link.addEventListener('click', () => {
@@ -236,25 +236,25 @@
       }
     });
 
-    // Form validation and submission
+ 
     const tripForm = document.getElementById('tripForm');
     const confirmation = document.getElementById('confirmation');
 
-    // Set minimum date to today + 3 days
+  
     const dateInput = document.getElementById('date');
     const today = new Date();
     const minDate = new Date(today);
     minDate.setDate(today.getDate() + 3);
     dateInput.min = minDate.toISOString().split('T')[0];
 
-    // Phone number validation
+ 
     const phoneInput = document.getElementById('phone');
     phoneInput.addEventListener('input', () => {
       const phoneValue = phoneInput.value.replace(/\D/g, '');
       phoneInput.value = phoneValue;
     });
 
-    // Time validation
+   
     const departTimeInput = document.getElementById('departtime');
     const returnTimeInput = document.getElementById('returntime');
 
@@ -269,29 +269,29 @@
       }
     });
 
-    // Form submission
+
     tripForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      // Additional validation
+     
       if (!tripForm.checkValidity()) {
         tripForm.reportValidity();
         return;
       }
 
-      // Show confirmation message
+    
       confirmation.style.display = 'block';
 
-      // Scroll to confirmation
+ 
       confirmation.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
-      // Reset form after 5 seconds
+      
       setTimeout(() => {
         tripForm.reset();
         confirmation.style.display = 'none';
       }, 5000);
 
-      // In a real application, you would send form data to a server here
+      
       console.log('Form submitted with data:', {
         department: document.getElementById('department').value,
         coordinator: document.getElementById('coordinator').value,
@@ -305,14 +305,13 @@
       });
     });
 
-    // Reset form handler
     tripForm.addEventListener('reset', () => {
       confirmation.style.display = 'none';
     });
 
-    // Accessibility improvements
+ 
     document.addEventListener('keydown', (e) => {
-      // Close menu on Escape key
+    
       if (e.key === 'Escape' && isOpen) {
         menuIcon.classList.remove('active');
         menuIcon.setAttribute('aria-expanded', false);
@@ -322,5 +321,6 @@
     });
   </script>
 </body>
+
 
 </html>
