@@ -109,7 +109,7 @@
             </table>
         </div>
 
-        <!-- Staff Cards for Mobile -->
+       
         <div class="staff-cards" id="staff-cards">
             <div class="staff-card">
                 <div class="staff-card-header">
@@ -256,7 +256,7 @@
             </div>
         </div>
 
-        <!-- Additional Information Section -->
+    
         <section class="section-header">
             <h2>Staff Responsibilities</h2>
             <p>Each member of our team plays a crucial role in ensuring smooth transport operations</p>
@@ -319,7 +319,7 @@
     </footer>
 
     <script>
-        // Mobile menu toggle
+      
         const menuIcon = document.getElementById('menu-icon');
         const navMenu = document.getElementById('nav-menu');
         let isOpen = false;
@@ -330,7 +330,7 @@
             menuIcon.setAttribute('aria-expanded', isOpen);
             navMenu.classList.toggle('active');
 
-            // Close menu when clicking a link
+            
             if (isOpen) {
                 document.querySelectorAll('.nav-menu a').forEach(link => {
                     link.addEventListener('click', () => {
@@ -343,9 +343,8 @@
             }
         });
 
-        // Accessibility improvements
         document.addEventListener('keydown', (e) => {
-            // Close menu on Escape key
+        
             if (e.key === 'Escape' && isOpen) {
                 menuIcon.classList.remove('active');
                 menuIcon.setAttribute('aria-expanded', false);
@@ -354,7 +353,7 @@
             }
         });
 
-        // Smooth scrolling for anchor links
+        
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const targetId = this.getAttribute('href');
@@ -371,7 +370,7 @@
             });
         });
 
-        // Format phone numbers for better readability
+        
         document.querySelectorAll('a[href^="tel:"]').forEach(link => {
             const phoneNumber = link.getAttribute('href').replace('tel:', '');
             if (phoneNumber.length === 10) {
@@ -380,7 +379,7 @@
             }
         });
 
-        // Highlight current page in navigation
+    
         const currentPath = window.location.pathname;
         const currentPage = currentPath.substring(currentPath.lastIndexOf('/') + 1);
 
@@ -392,5 +391,6 @@
         });
     </script>
 </body>
+
 
 </html>
