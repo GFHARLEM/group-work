@@ -57,7 +57,7 @@
                 Egerton University community.</p>
         </section>
 
-        <!-- Staff Table for Desktop -->
+       
         <div class="table-container" id="staff-table">
             <table aria-label="Transport Department Staff Directory">
                 <thead>
@@ -109,7 +109,7 @@
             </table>
         </div>
 
-        <!-- Staff Cards for Mobile -->
+      
         <div class="staff-cards" id="staff-cards">
             <div class="staff-card">
                 <div class="staff-card-header">
@@ -269,7 +269,6 @@
     </footer>
 
     <script>
-        // Mobile menu toggle
         const menuIcon = document.getElementById('menu-icon');
         const navMenu = document.getElementById('nav-menu');
         let isOpen = false;
@@ -280,7 +279,7 @@
             menuIcon.setAttribute('aria-expanded', isOpen);
             navMenu.classList.toggle('active');
 
-            // Close menu when clicking a link
+            
             if (isOpen) {
                 document.querySelectorAll('.nav-menu a').forEach(link => {
                     link.addEventListener('click', () => {
@@ -293,9 +292,9 @@
             }
         });
 
-        // Accessibility improvements
+       
         document.addEventListener('keydown', (e) => {
-            // Close menu on Escape key
+          
             if (e.key === 'Escape' && isOpen) {
                 menuIcon.classList.remove('active');
                 menuIcon.setAttribute('aria-expanded', false);
@@ -304,7 +303,7 @@
             }
         });
 
-        // Smooth scrolling for anchor links
+        
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const targetId = this.getAttribute('href');
@@ -321,7 +320,6 @@
             });
         });
 
-        // Format phone numbers for better readability
         document.querySelectorAll('a[href^="tel:"]').forEach(link => {
             const phoneNumber = link.getAttribute('href').replace('tel:', '');
             if (phoneNumber.length === 10) {
@@ -331,5 +329,6 @@
         });
     </script>
 </body>
+
 
 </html>
